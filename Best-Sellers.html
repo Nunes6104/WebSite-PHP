@@ -11,84 +11,79 @@
     <script src="script.js"></script>
   </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark rounded shadow-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-4 d-inline fs-2" href="Main.html">
-        <img src="img/logo.png" alt="Logo" style="max-width: 80px;" class="d-inline-block align-text-center ">
-        Motion Bikes
-      </a>
-
-      <div class="navbar-expand ms-auto me-5">
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item me-4 fs-4">
-          <a class="nav-link" href="#">
-          <i class="ph ph-heart-straight"></i>
+    <nav class="navbar navbar-expand-md bg-body-tertiary rounded shadow-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-4 d-inline fs-2" href="Main.html">
+            <img src="img/logo.png" alt="Logo" style="max-width: 80px;" class="d-inline-block align-text-center ">
+            Motion Bikes
           </a>
-        </li>
-        <li class="nav-item me-4 fs-4">
-          <a class="nav-link" href="#">
-          <i class="ph ph-shopping-cart"></i>
-          </a>
-        </li>
-        <li class="nav-item dropdown fs-4">
-          <a class="nav-link dropdown-toggle fs-4" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
-            <i class="ph ph-user"></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item fs-5" href="#">Account</a></li>
-            <li><a class="dropdown-item fs-5" href="#">Favorites</a></li>
-            <li><a class="dropdown-item fs-5" href="#">Orders</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-      
-      <!--MENU BARRA LATERAL-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-danger" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown p-3 ">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark btn-light" type="submit">Search</button>
-              </form>
-            </li>  
 
-            <li class="nav-item p-2">
-              <a class="nav-link fs-4" href="Best-Sellers.html">Best Sellers</a>
-            </li>
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="sidebar offcanvas offcanvas-start bg-body-tertiary rounded" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+    
+            <div class="offcanvas-body justify-content-center hstack gap-4">
+              <ul class="navbar-nav">
+                <li class="nav-item p-2">
+                  <a class="nav-link fs-4" href="Best-Sellers.html">Best Sellers</a>
+                </li>
+                <li class="nav-item p-2 fs-4">
+                  <a class="nav-link" href="Brand.html">Brand</a>
+                </li>
+                <li class="nav-item dropdown p-2">
+                  <a class="nav-link dropdown-toggle fs-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <ul class="dropdown-menu p-2">
+                    <li><a class="dropdown-item fs-5" href="#">Account</a></li>
+                    <li><a class="dropdown-item fs-5" href="#">Favorites</a></li>
+                    <li><a class="dropdown-item fs-5" href="#">Orders</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown p-3 ">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                  </li>  
+              </ul>
+            </div>
+          </div>
 
-            <li class="nav-item p-2 fs-4">
-              <a class="nav-link" href="Brand.html">Brand</a>
-            </li>
-
-            <li class="nav-item dropdown p-2">
-              <a class="nav-link dropdown-toggle fs-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
+          <ul class="navbar-nav me-5 d-flex flex-row">
+            <li class="nav-item me-4 fs-4">
+              <a class="nav-link" href="#">
+              <i class="ph ph-heart-straight"></i>
               </a>
-                <ul class="dropdown-menu p-2">
-                  <li><a class="dropdown-item fs-5" href="#">Account</a></li>
-                  <li><a class="dropdown-item fs-5" href="#">Favorites</a></li>
-                  <li><a class="dropdown-item fs-5" href="#">Orders</a></li>
-                </ul>
             </li>
-          </ul>
+            <li class="nav-item me-4 fs-4">
+              <a class="nav-link" href="#">
+              <i class="ph ph-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown fs-4">
+              <a class="nav-link dropdown-toggle fs-4" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="ph ph-user"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end me-4">
+                <li><a class="dropdown-item fs-5" href="#">Account</a></li>
+                <li><a class="dropdown-item fs-5" href="#">Favorites</a></li>
+                <li><a class="dropdown-item fs-5" href="#">Orders</a></li>
+              </ul>
+            </li>
+          </ul>     
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
 
 
-<footer> 
-  <div class="hstack text-center">
+<footer>
+  <div class="hstack">
     <div class="vstack fs-5"><strong>Motion Bikes</strong>
       <div class="p-2 fs-6">
         <a class="link-dark link-underline link-underline-opacity-0" href="about_us.html">About Us</a>
