@@ -86,6 +86,18 @@
   </nav>
 
 
+  <form action="#" method="post" id="frm" name="frm" enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+      <label for="txtInput">Input</label>
+      <input type="text" id="txtInput" name="num" class="form-control" value="23">
+    </div>
+    <div class="form-group d-flex">
+      <button type="button" class="btn btn-danger" id="btDobro" name="btDobro">Dobro</button>
+    </div>
+    <div id="tv"></div>
+  </form>
+
+
 
 <footer> 
   <div class="hstack text-center">
@@ -161,5 +173,35 @@
       the actual colors.</small>
   </div>
 </footer>
+
+
+<script>
+  window.onload = function(){
+    const txtInput = document.getElementById("txtInput");
+    const frm = document.getElementById("frm");
+    const   tv = document.getElementById("tv");
+    const btDobro = document.getElementById("btDobro");
+
+    btDobro.onclick = (evt) =>{
+      evt.preventDefault();
+      alert("Dobro");
+      formdata = new FormData(frm);
+      formdata.append("Escola", "ISTEC");
+      for(const[k,v] of formdata.entries()){
+        console.log(k + "-->" + v); 
+      }
+
+      fetch("dobro.php",{
+        method:"post",
+        body:formdata
+      }).then(response => response.json()).then(dados => {
+        console.log(dados);
+        tv.innerHTML = dados.dobro;
+      }).catch((erro) => {tv.innerHTML = erro;});
+    }
+  }
+
+  //onload-----------------------------
+</script>
 </body>
 </html>
